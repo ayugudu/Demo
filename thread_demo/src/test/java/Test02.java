@@ -62,10 +62,7 @@ public class Test02 {
               } catch (InterruptedException e) {
                   e.printStackTrace();
               }
-          }
-
-        },"t1");
-
+          }},"t1");
       t1.start();
 
 
@@ -85,7 +82,6 @@ public class Test02 {
      Thread t3= new Thread(()->{
           //被t1加锁了，拿不到锁，进入blocked
           synchronized (Test02.class){
-
           }
       },"t3");
      t3.start();
